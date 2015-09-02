@@ -1,0 +1,50 @@
+Configuration of Pipelines
+
+Using JSON, create collections of resources from which a pipeline can be built by a the configuration script.
+* Some of the end-points are PLACEHOLDERS == variable
+So the pipeline is created and places for the variables are known; at every step there a separate engine that retrieves the value
+of that variable and plugs it into where it supposed to go.
+
+Something like this below;
+*on top of it could be a token for whenever a pipeline is created from the pool*
+*or whenever the server tries to access this resource/pool, it should do so with token that identifies it*
+*tokens are served by the setup/configuration manager and correspond to the details(project,study, etc) of the *
+collections {
+    resources {
+        references {
+            human {
+                {assembly_38:path}
+            }
+            bacteria {
+                .....
+            }
+        variation {
+            human {
+                assembly_38 {
+                    {dbsnp:path}
+                    {Mills_Gold:path}
+                }
+                assembly_37 {
+                    .....
+                }
+        .....
+    steps {
+        index {
+            TOOL:
+            DICT_FILE:
+            INPUT_FILE:
+            OUTPUT_FILE:
+            OPTIONS:
+            ...
+        }
+        align {
+           TOOL:
+           REF:
+           INPUT_FILE:(array)   #one or more files
+           OPTIONS:
+        }
+    nodes/hosts {...}
+    memory {...}
+    ....
+    
+        ....
