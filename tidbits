@@ -1,1 +1,3 @@
 
+Controlling Docker containers....stop, start, wait, container logs, error streams, etc
+https://docs.docker.com/reference/api/docker_remote_api_v1.15/
