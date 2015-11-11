@@ -1,6 +1,0 @@
-
-Install docker on personal Laptop;
-Develop minimalistic 'Tracked-Container' systems - containers where every file is checksumed
-- metadata(file_name, md5/sha, timestamp, last_modified_timestamp) stored in the container in a file ready to be read by an object-store such as Redis, or metadat exported on the fly to a Redis db
-
-Plan is for this metadata to be available for each docker process(pipeline/setup)
